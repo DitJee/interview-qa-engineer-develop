@@ -18,7 +18,6 @@ jobs:
         run: docker compose up -d
       - name: Init DB
         run: docker compose exec postgres bash -c "chmod +x /home/scripts/exec_sql.sh && /home/scripts/exec_sql.sh schema.sql"
-
       - name: Install deps
         run: pip install -r requirements.txt
       - name: Run tests
