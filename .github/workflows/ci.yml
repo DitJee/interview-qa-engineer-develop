@@ -20,7 +20,6 @@ jobs:
         run: |
           echo "Waiting for postgres..."
           sleep 5
-          done
       - name: Init DB
         run: docker compose exec postgres bash /home/scripts/exec_sql.sh schema.sql
       - name: Install deps
