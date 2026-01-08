@@ -1,0 +1,24 @@
+name: CIhehe
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Start services
+        run: docker compose up -d
+      - name: Init DB
+        run: docker compose exec -it postgres bash -c "/home/scripts/exec_sql.sh schema.sql"
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Run tests
+        run: pytest -v
