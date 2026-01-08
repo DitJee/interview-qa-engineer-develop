@@ -16,6 +16,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Start services
         run: docker compose up -d
+      - name: Wait for Postgres to be ready
+        run: |
+          echo "Waiting for postgres..."
+          sleep 5
+          done
       - name: Init DB
         run: docker compose exec postgres bash /home/scripts/exec_sql.sh schema.sql
       - name: Install deps
