@@ -27,4 +27,5 @@ CREATE TABLE IF NOT EXISTS passengers (
 );
 
 
-INSERT INTO flights VALUES('AAA01', '2024-12-01T00:00:00Z', '2024-12-01T02:00:00Z', 'DMK', 'HYD', 'Asia/Bangkok', 'Asia/Bangkok')
+INSERT INTO flights VALUES('AAA01', '2024-12-01T00:00:00Z', '2024-12-01T02:00:00Z', 'DMK', 'HYD', 'Asia/Bangkok', 'Asia/Bangkok');
+INSERT INTO flights VALUES('AAA02','2024-12-01T00:00:00+07:00','2024-12-01T05:00:00+00:00','DMK','LHR','Asia/Bangkok','Europe/London');

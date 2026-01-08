@@ -3,6 +3,8 @@ import pytest
 
 BASE_URL = "http://localhost:8000"
 FLIGHT_ID = "AAA01"
+FLIGHT_ID_2 = "AAA02"
+
 PASSPORT_ID_CORRECT = "BC1500"
 FIRST_NAME_CORRECT = "Shauna"
 LAST_NAME_ID_CORRECT = "Davila"
@@ -16,6 +18,10 @@ def flight_id():
     return FLIGHT_ID
 
 @pytest.fixture(scope="session")
+def flight_id_2():
+    return FLIGHT_ID_2
+
+@pytest.fixture(scope="session")
 def passport_id_correct():
     return PASSPORT_ID_CORRECT
 
@@ -26,3 +32,11 @@ def first_name_correct():
 @pytest.fixture(scope="session")
 def last_name_correct():
     return LAST_NAME_ID_CORRECT
+
+@pytest.fixture(scope="session")
+def utc_second_bkk():
+    return 7 * 60 * 60
+
+@pytest.fixture(scope="session")
+def utc_second_london():
+    return 0
