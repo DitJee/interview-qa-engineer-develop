@@ -1,5 +1,11 @@
 # Welcome to EarnIn Airline.
 
+> !
+>
+> [Jump to Candidate Submission](#submission-test-guide)
+>
+> !
+
 This is RESTful API for EarnIn Airline application.
 
 ## Up and running
@@ -239,4 +245,4 @@ up.
 - Database isolation per test: some tests depend on database state which should not be the case.
 - Enforce test success before merge: the current CI reports the failed pipeline, but it does not prevent the bad push/merge from happening.
 - More tests: service readiness, schema validation
-- Environment variable integration: some configs are better to be read from environment variable for more flexibilities.
+- Environment variable integration: some configs are better to be read from environment variable for more flexibilities (dev/prod test).
