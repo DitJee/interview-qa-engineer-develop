@@ -13,8 +13,6 @@ def test_delete_passenger_valid(api, flight_id, passport_id_correct, first_name_
     _res = requests.post(f"{api}/flights/{flight_id}/passengers", json=payload)
     res = requests.get(f"{api}/flights/{flight_id}/passengers")
     body= res.json()
-    # print(":hehe")
-    # print(res.json())
 
     customer_id = None
     for p in body["passengers"]:
